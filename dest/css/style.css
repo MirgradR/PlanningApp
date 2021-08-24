@@ -1,0 +1,333 @@
+/* Resetting styles */
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: inline-block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  background-color: #60b7fa;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.header .header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.header .header__content .header__name a {
+  color: #caf7f7;
+}
+
+.header .header__content .header__name a:hover {
+  color: #85b6b6;
+}
+
+.header .header__content .header__search {
+  -ms-flex-item-align: center;
+  align-self: center;
+  position: relative;
+}
+
+.header .header__content .header__search input {
+  width: 235px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.header .header__content .header__search button {
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+}
+
+.main__content .plan-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+
+.main__content .plan-list > * {
+  border-top: 1px solid #000;
+  padding: 10px 0;
+  min-height: 80px;
+}
+
+.main__content .plan-list > *:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.main__content .plan-list .plan-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main__content .plan-list .plan-item .plan-item_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.main__content .plan-list .plan-item .plan-item_content .plan-item_title {
+  margin-right: 50px;
+  font-weight: 400;
+}
+
+.main__content .plan-list .plan-item .plan-item_content .plan-item_description {
+  max-width: 600px;
+}
+
+.main__content .plan-list .plan-item .plan-item_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.main__content .plan-list .plan-item .plan-item_buttons > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.main__content .plan-list .plan-item .plan-item_buttons > *:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.main__content .plan-list .plan-item .plan-item_buttons .btn-set {
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 26px;
+}
+
+.main__content .plan-list .plan-item .plan-item_buttons .btn-set a {
+  margin-left: 3px;
+}
+
+.main__content .add__list {
+  text-align: center;
+}
+
+.main__content .add__list .btn-add {
+  background-color: #60b7fa;
+  padding: 25px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 0;
+}
+
+.main__content .add__list .btn-add:hover {
+  background-color: #063df1f6;
+}
+
+.main__create {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.main__create .form-create {
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.main__create .form-create > * {
+  margin-bottom: 10px;
+}
+
+.main__create .form-create #name {
+  margin-bottom: 30px;
+}
+
+.main__create .form-create label {
+  font-size: 22px;
+}
+
+.main__create .form-create input,
+.main__create .form-create textarea {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.main__create .form-create input:hover,
+.main__create .form-create input:focus,
+.main__create .form-create textarea:hover,
+.main__create .form-create textarea:focus {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.281);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.281);
+}
+
+.main__create .form-create .form-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.button-create {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.button-create .btn-create {
+  padding: 10px;
+  width: 200px;
+  background-color: #60b7fa;
+  color: #fff;
+}
+
+.button-create .btn-create:hover {
+  background-color: #063df1f6;
+}
+
+.button-create #save {
+  margin-right: 20px;
+}
+
+.button-create #delete {
+  background-color: #ce4141;
+}
+
+.button-create #delete:hover {
+  background-color: #8b1616;
+}
+
+@media (max-width: 500px) {
+  .header .header__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .header .header__content .header__name {
+    margin-bottom: 20px;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .main .main__content .plan-item .plan-item_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    max-width: 220px;
+  }
+
+  .main .main__content .plan-item .plan-item_content .plan-item_title {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}
