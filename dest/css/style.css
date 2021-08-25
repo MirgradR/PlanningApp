@@ -101,6 +101,10 @@ ul li {
   right: 10px;
 }
 
+.main__content {
+  border-top: 1px solid #000;
+}
+
 .main__content .plan-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,13 +117,13 @@ ul li {
 }
 
 .main__content .plan-list > * {
-  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   padding: 10px 0;
   min-height: 80px;
 }
 
-.main__content .plan-list > *:last-child {
-  border-bottom: 1px solid #000;
+.main__content .plan-list > *:first-child {
+  border-top: 1px solid #000;
 }
 
 .main__content .plan-list .plan-item {
@@ -132,6 +136,10 @@ ul li {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.main__content .plan-list .plan-item.hide {
+  display: none;
 }
 
 .main__content .plan-list .plan-item .plan-item_content {

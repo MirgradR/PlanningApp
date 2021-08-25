@@ -69,3 +69,31 @@ function deleteList() {
 }
 deleteList()
 
+// Search elem
+
+const search = document.querySelector('.input-search');
+const li = document.querySelectorAll('li')
+const elem = document.querySelectorAll('li h2')
+
+const searchElem = () => {
+    if (search) {
+        search.addEventListener('input', function() {
+            let value = RegExp(this.value.trim(), 'gi')
+            if (value != '') {
+                elem.forEach(e => {
+                    if (e.innerText.search(value) == -1) {  
+                        e.closest('li').classList.add('hide')
+                        console.log(e)
+                    } else {
+                        e.closest('li').classList.remove('hide')
+                    }
+                })
+            } else {
+                elem.forEach(e => {
+                    e.closest('li').classList.remove('hide')
+                })
+            } 
+        })
+    }     
+}
+searchElem()
