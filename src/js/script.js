@@ -1,13 +1,11 @@
 let ul = document.querySelector('.plan-list');
 let btnDelete = document.querySelector('.btn-delete');
 
-
 let list = [];
 if (localStorage.getItem('todo')!=undefined) {
     list = JSON.parse(localStorage.getItem('todo'))
     showList()
 }
-
 
 function getCase() {
     let name = document.getElementById('name');
@@ -18,6 +16,7 @@ function getCase() {
             let item = {}
             item.name = name.value;
             item.details = details.value;
+            item.important = 'false';
             list.push(item);
             showList();
             localStorage.setItem('todo', JSON.stringify(list));
@@ -25,8 +24,6 @@ function getCase() {
             details.value = ''
         }) 
     }
-    
-
 }
 getCase()
 
@@ -37,7 +34,10 @@ function showList() {
             let li = document.createElement('li')
             li.classList.add(`plan-item`)
             li.classList.add(`item${key}`)
-            li.setAttribute('id', `${key}`)  //
+            li.setAttribute('id', `${key}`) 
+            if (list[key].important == 'true') {
+                li.classList.add(`important`)
+            }
             li.innerHTML = `
             <div class="plan-item_content">
                 <h2 class="plan-item_title">${list[key].name}</h2>
@@ -100,40 +100,26 @@ const searchElem = () => {
 searchElem()
 
 //important list
-let important = []
+
 const setImportant = () => {
-    //li
-    
     let setBtns = document.querySelectorAll('.btn-set');
     setBtns.forEach(e => {
         e.addEventListener('click', function() {
-            important = JSON.parse(localStorage.getItem('important'))
             let closestLI = e.closest('li');
-            
-            if (!important.includes(closestLI.id)) {
-                important.push(closestLI.id) 
-                closestLI.classList.add('important')
-            } else {
-                let i = important.indexOf(closestLI.id) 
-                important.splice(i, 1)
-                closestLI.classList.remove('important')
+            list = JSON.parse(localStorage.getItem('todo'))
+            for (let key in list) {
+                if (key == closestLI.id && list[key].important == 'false') {
+                    list[key].important = 'true'
+                    closestLI.classList.add('important')
+                    //console.log(list[key]) 
+                } else if (key == closestLI.id && list[key].important == 'true') {
+                    list[key].important = 'false'
+                    closestLI.classList.remove('important')
+                    //console.log(list[key]) 
+                }
             }
-            // closestLI.classList.toggle('important') // !!!!!
-            localStorage.setItem('important', JSON.stringify(important));
-            console.log(important)
-            
-           
+            localStorage.setItem('todo', JSON.stringify(list));
         })
-        
-        //console.log(e.closest(`li#${important}`).id) 
     })
-   
-} 
-
-console.log(localStorage.getItem('important'))
+}
 setImportant()
-
-// if (localStorage.getItem('important')!=undefined) {
-//     important = JSON.parse(localStorage.getItem('important'))
-//     setImportant()
-// }
