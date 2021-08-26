@@ -8,6 +8,7 @@ if (localStorage.getItem('todo')!=undefined) {
     showList()
 }
 
+
 function getCase() {
     let name = document.getElementById('name');
     let details = document.getElementById('details');
@@ -36,13 +37,14 @@ function showList() {
             let li = document.createElement('li')
             li.classList.add(`plan-item`)
             li.classList.add(`item${key}`)
+            li.setAttribute('id', `${key}`)  //
             li.innerHTML = `
             <div class="plan-item_content">
                 <h2 class="plan-item_title">${list[key].name}</h2>
                 <p class="plan-item_description">${list[key].details}</p>
             </div>
             <div class="plan-item_buttons">
-                <button class="btn-set"><a href="create.html">&#8943;</a></button>
+                <button class="btn-set">&#9734;</button>
                 <button class="btn-delete (${key})">&#10060;</button>
             </div>
             `
@@ -83,7 +85,6 @@ const searchElem = () => {
                 elem.forEach(e => {
                     if (e.innerText.search(value) == -1) {  
                         e.closest('li').classList.add('hide')
-                        console.log(e)
                     } else {
                         e.closest('li').classList.remove('hide')
                     }
@@ -97,3 +98,42 @@ const searchElem = () => {
     }     
 }
 searchElem()
+
+//important list
+let important = []
+const setImportant = () => {
+    //li
+    
+    let setBtns = document.querySelectorAll('.btn-set');
+    setBtns.forEach(e => {
+        e.addEventListener('click', function() {
+            important = JSON.parse(localStorage.getItem('important'))
+            let closestLI = e.closest('li');
+            
+            if (!important.includes(closestLI.id)) {
+                important.push(closestLI.id) 
+                closestLI.classList.add('important')
+            } else {
+                let i = important.indexOf(closestLI.id) 
+                important.splice(i, 1)
+                closestLI.classList.remove('important')
+            }
+            // closestLI.classList.toggle('important') // !!!!!
+            localStorage.setItem('important', JSON.stringify(important));
+            console.log(important)
+            
+           
+        })
+        
+        //console.log(e.closest(`li#${important}`).id) 
+    })
+   
+} 
+
+console.log(localStorage.getItem('important'))
+setImportant()
+
+// if (localStorage.getItem('important')!=undefined) {
+//     important = JSON.parse(localStorage.getItem('important'))
+//     setImportant()
+// }
