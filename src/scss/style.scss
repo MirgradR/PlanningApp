@@ -1,5 +1,58 @@
 @import 'resetting';
 
+body{
+    &.dark-theme {
+        background-color: #252949;
+        .header {
+            background-color: #315169; 
+            .header__search {
+                input {
+                    background-color: #4f7694;
+                    color: #b8bec2;
+                    &::placeholder {
+                        color: #b8bec2;
+                    }
+                }
+            }  
+        }
+        .main__content {
+            background-color: #252949;
+            .plan-list {
+                &>* {
+                    border-color: rgba(209, 205, 205, 0.877);
+                    color: rgba(255, 255, 255, 0.836);   
+                } 
+            }
+        }
+        .main__create {
+            .form-create {
+                color: #b8bec2;
+                input, textarea {
+                    background-color: #4f7694;
+                    color: #b8bec2;
+                    &::placeholder {
+                        color: #b8bec2;
+                    }
+                }
+            }
+        }
+        .button-create {
+            .btn-create {
+                background-color: #315169; 
+                color: #83b4da;
+            }
+        }
+        .add__list {
+            a {
+               background-color: #315169; 
+               color: #83b4da;
+            } 
+        }
+    }
+}
+
+
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -24,6 +77,12 @@
         .header__search {
             align-self: center;
             position: relative;
+            .color-theme {
+                left: -25px;
+                top: -3px;
+                font-size: 25px;
+                color: rgb(51, 51, 50);
+            }
             input {
                 width: 235px;
                 padding: 5px 15px;
@@ -129,7 +188,7 @@
                     margin-left: 1px;
                     border-radius: 50%;
                     font-size: 32px;
-                    color: rgb(46, 46, 44);
+                    color: rgb(80, 80, 77);
                     &:hover {
                         text-shadow: 2px 2px 3px rgb(251, 255, 0);
                     }
@@ -140,6 +199,7 @@
     }
     .add__list {
         text-align: center;
+        height: 70px;
         .btn-add {
             background-color: #60b7fa;
             padding: 25px;

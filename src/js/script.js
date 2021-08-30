@@ -125,3 +125,13 @@ const setImportant = () => {
 setImportant()
 
 // Chosing a color theme
+
+let colorTheme = document.querySelector('.color-theme')
+if (!localStorage.theme) localStorage.theme = 'light'
+document.body.className = localStorage.theme
+if (colorTheme) {
+    colorTheme.addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme')
+        localStorage.theme = document.body.className || 'light'  
+    })
+}

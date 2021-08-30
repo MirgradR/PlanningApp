@@ -52,6 +52,93 @@ ul li {
   list-style: none;
 }
 
+body.dark-theme {
+  background-color: #252949;
+}
+
+body.dark-theme .header {
+  background-color: #315169;
+}
+
+body.dark-theme .header .header__search input {
+  background-color: #4f7694;
+  color: #b8bec2;
+}
+
+body.dark-theme .header .header__search input::-webkit-input-placeholder {
+  color: #b8bec2;
+}
+
+body.dark-theme .header .header__search input::-moz-placeholder {
+  color: #b8bec2;
+}
+
+body.dark-theme .header .header__search input:-ms-input-placeholder {
+  color: #b8bec2;
+}
+
+body.dark-theme .header .header__search input::-ms-input-placeholder {
+  color: #b8bec2;
+}
+
+body.dark-theme .header .header__search input::placeholder {
+  color: #b8bec2;
+}
+
+body.dark-theme .main__content {
+  background-color: #252949;
+}
+
+body.dark-theme .main__content .plan-list > * {
+  border-color: rgba(209, 205, 205, 0.877);
+  color: rgba(255, 255, 255, 0.836);
+}
+
+body.dark-theme .main__create .form-create {
+  color: #b8bec2;
+}
+
+body.dark-theme .main__create .form-create input,
+body.dark-theme .main__create .form-create textarea {
+  background-color: #4f7694;
+  color: #b8bec2;
+}
+
+body.dark-theme .main__create .form-create input::-webkit-input-placeholder,
+body.dark-theme .main__create .form-create textarea::-webkit-input-placeholder {
+  color: #b8bec2;
+}
+
+body.dark-theme .main__create .form-create input::-moz-placeholder,
+body.dark-theme .main__create .form-create textarea::-moz-placeholder {
+  color: #b8bec2;
+}
+
+body.dark-theme .main__create .form-create input:-ms-input-placeholder,
+body.dark-theme .main__create .form-create textarea:-ms-input-placeholder {
+  color: #b8bec2;
+}
+
+body.dark-theme .main__create .form-create input::-ms-input-placeholder,
+body.dark-theme .main__create .form-create textarea::-ms-input-placeholder {
+  color: #b8bec2;
+}
+
+body.dark-theme .main__create .form-create input::placeholder,
+body.dark-theme .main__create .form-create textarea::placeholder {
+  color: #b8bec2;
+}
+
+body.dark-theme .button-create .btn-create {
+  background-color: #315169;
+  color: #83b4da;
+}
+
+body.dark-theme .add__list a {
+  background-color: #315169;
+  color: #83b4da;
+}
+
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -86,6 +173,13 @@ ul li {
   -ms-flex-item-align: center;
   align-self: center;
   position: relative;
+}
+
+.header .header__content .header__search .color-theme {
+  left: -25px;
+  top: -3px;
+  font-size: 25px;
+  color: #333332;
 }
 
 .header .header__content .header__search input {
@@ -209,7 +303,7 @@ ul li {
   margin-left: 1px;
   border-radius: 50%;
   font-size: 32px;
-  color: #2e2e2c;
+  color: #50504d;
 }
 
 .main__content .plan-list .plan-item .plan-item_buttons .btn-set:hover {
@@ -218,6 +312,7 @@ ul li {
 
 .main__content .add__list {
   text-align: center;
+  height: 70px;
 }
 
 .main__content .add__list .btn-add {
