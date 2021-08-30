@@ -176,6 +176,7 @@ body.dark-theme .add__list a {
 }
 
 .header .header__content .header__search .color-theme {
+  position: absolute;
   left: -25px;
   top: -3px;
   font-size: 25px;
