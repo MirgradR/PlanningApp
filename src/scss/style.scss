@@ -77,12 +77,15 @@ body{
         .header__search {
             align-self: center;
             position: relative;
+            .search-plan {
+                align-items: center;
+                display: flex; 
+            }
             .color-theme {
-                position: absolute;
-                left: -25px;
-                top: -3px;
+                background-color: transparent;
                 font-size: 25px;
                 color: rgb(51, 51, 50);
+                margin-right: 3px;
             }
             input {
                 width: 235px;
@@ -90,10 +93,11 @@ body{
                 border-radius: 20px;
                 font-size: 18px;
             }
-            button {
+            button.btn-search {
                 background-color: transparent;
                 position: absolute;
                 right: 10px;
+                top: 2px;
             }
         }
     }

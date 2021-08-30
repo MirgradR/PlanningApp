@@ -175,12 +175,20 @@ body.dark-theme .add__list a {
   position: relative;
 }
 
+.header .header__content .header__search .search-plan {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .header .header__content .header__search .color-theme {
-  position: absolute;
-  left: -25px;
-  top: -3px;
+  background-color: transparent;
   font-size: 25px;
   color: #333332;
+  margin-right: 3px;
 }
 
 .header .header__content .header__search input {
@@ -190,10 +198,11 @@ body.dark-theme .add__list a {
   font-size: 18px;
 }
 
-.header .header__content .header__search button {
+.header .header__content .header__search button.btn-search {
   background-color: transparent;
   position: absolute;
   right: 10px;
+  top: 2px;
 }
 
 .main__content {
