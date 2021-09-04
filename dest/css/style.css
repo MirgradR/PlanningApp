@@ -134,7 +134,7 @@ body.dark-theme .button-create .btn-create {
   color: #83b4da;
 }
 
-body.dark-theme .add__list a {
+body.dark-theme .add__list a.btn-add {
   background-color: #315169;
   color: #83b4da;
 }
